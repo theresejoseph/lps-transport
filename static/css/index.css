@@ -1,0 +1,351 @@
+:root {
+  --lps-bg: #FAF7F0;
+  --lps-text: #1B1B1B;
+  --lps-muted: #66625A;
+  --lps-accent: #0E6B5C;
+  --lps-accent-dark: #0A4F44;
+  --lps-rule: #E4DFD3;
+  --lps-panel: #F2EEE4;
+}
+
+html, body {
+  background-color: var(--lps-bg);
+  color: var(--lps-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Single narrow column, generous whitespace */
+.lps-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+section.lps-section {
+  padding: 3.5rem 0 1rem 0;
+}
+
+.title, .subtitle, h1, h2, h3 {
+  color: var(--lps-text);
+  font-family: inherit;
+}
+
+h2.title.is-3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: var(--lps-text);
+}
+
+/* Hero */
+.lps-hero {
+  padding: 4.5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.lps-hero-logo {
+  height: 110px;
+  width: auto;
+  margin-bottom: 1.1rem;
+}
+
+.lps-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.lps-hero .lps-subtitle {
+  font-size: 1.2rem;
+  color: var(--lps-muted);
+  max-width: 640px;
+  margin: 0 auto 1.75rem auto;
+}
+
+.lps-hero-buttons {
+  margin-bottom: 2.25rem;
+}
+
+.button.lps-button {
+  background-color: var(--lps-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+}
+
+.button.lps-button:hover {
+  background-color: var(--lps-accent-dark);
+  color: #ffffff;
+}
+
+.button.lps-button-outline {
+  background-color: transparent;
+  color: var(--lps-accent);
+  border: 1.5px solid var(--lps-accent);
+  border-radius: 6px;
+  font-weight: 500;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+}
+
+.button.lps-button-outline:hover {
+  background-color: var(--lps-accent);
+  color: #ffffff;
+}
+
+/* Video */
+video.lps-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+figure.lps-figure {
+  margin: 0 0 1rem 0;
+}
+
+figure.lps-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--lps-muted);
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* Stats line under each result video */
+.lps-stats {
+  font-size: 0.95rem;
+  color: var(--lps-text);
+  background-color: var(--lps-panel);
+  border-left: 3px solid var(--lps-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 0.65rem 1rem;
+  margin-top: 0.9rem;
+}
+
+.lps-caveat {
+  font-size: 0.88rem;
+  color: var(--lps-muted);
+  margin-top: 0.75rem;
+}
+
+/* Comparison table */
+.lps-table-wrapper {
+  overflow-x: auto;
+}
+
+table.table.lps-table {
+  background-color: transparent;
+  width: 100%;
+}
+
+table.table.lps-table th {
+  color: var(--lps-text);
+  border-color: var(--lps-rule);
+  font-weight: 600;
+}
+
+table.table.lps-table td {
+  border-color: var(--lps-rule);
+  color: var(--lps-text);
+  vertical-align: middle;
+}
+
+.lps-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 240px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.lps-profile img {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.lps-mounts img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+.lps-table-note {
+  font-size: 0.85rem;
+  color: var(--lps-muted);
+  margin-top: 0.4rem;
+}
+
+/* Privacy comparison */
+.lps-compare img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.lps-compare .lps-compare-label {
+  font-size: 0.9rem;
+  color: var(--lps-muted);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Deployment steps */
+.lps-steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lps-steps li {
+  position: relative;
+  padding: 0 0 1.1rem 3rem;
+}
+
+.lps-steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--lps-accent);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* FAQ */
+.lps-faq details {
+  border-top: 1px solid var(--lps-rule);
+  padding: 0.9rem 0;
+}
+
+.lps-faq details:last-child {
+  border-bottom: 1px solid var(--lps-rule);
+}
+
+.lps-faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--lps-text);
+}
+
+.lps-faq details p {
+  margin-top: 0.6rem;
+  color: var(--lps-text);
+}
+
+/* Supported-by strip */
+.lps-sponsors {
+  border-top: 1px solid var(--lps-rule);
+  margin-top: 3.5rem;
+  padding: 2.25rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.lps-sponsors .lps-sponsors-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lps-muted);
+  margin-bottom: 1.1rem;
+}
+
+.lps-sponsors img {
+  height: 90px;
+  width: auto;
+  margin: 0.75rem 1.5rem;
+  vertical-align: middle;
+}
+
+/* Footer */
+footer.lps-footer {
+  background-color: transparent;
+  padding: 1rem 0 2.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--lps-muted);
+}
+
+footer.lps-footer a {
+  color: var(--lps-muted);
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  color: var(--lps-accent);
+}
+
+a:hover {
+  color: var(--lps-accent-dark);
+}
+
+/* Hero video carousel */
+.lps-hero-carousel {
+  overflow: hidden;
+  text-align: left;
+}
+
+.lps-hero-carousel .item {
+  overflow: hidden;
+  padding: 0 2px;
+}
+
+.lps-hero-carousel video {
+  margin: 0;
+}
+
+.lps-carousel-caption {
+  font-size: 0.9rem;
+  color: var(--lps-muted);
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* bulma-carousel nav arrows in the accent colour */
+.lps-hero-carousel .slider-navigation-previous,
+.lps-hero-carousel .slider-navigation-next {
+  background-color: rgba(250, 247, 240, 0.85);
+  border: 1px solid var(--lps-rule);
+}
+
+@media (max-width: 480px) {
+  .lps-hero-logo {
+    height: 80px;
+  }
+
+  .lps-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .lps-hero .lps-subtitle {
+    font-size: 1.05rem;
+  }
+
+  section.lps-section {
+    padding: 2.5rem 0 0.5rem 0;
+  }
+}

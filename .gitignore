@@ -1,0 +1,6 @@
+.DS_store
+.idea
+
+# Internal working notes: media slot tracking, local dataset paths and
+# re-encode commands. Useful locally, not meant for the public repo.
+MEDIA_TODO.md
