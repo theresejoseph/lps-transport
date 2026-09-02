@@ -303,11 +303,11 @@
 <section class="lps-section">
   <div class="lps-container">
     <h2 class="title is-3">What it costs, and how it integrates</h2>
+
     <div class="content">
       <p>
         Beacons put the cost in the tunnel, once per tunnel, and again every replacement cycle.
-        LPS puts it on the vehicle, where it scales with the fleet instead of the network, and the
-        per-corridor cost is a single survey pass.
+        LPS puts it on the vehicle, where it scales with the fleet instead of the network.
       </p>
     </div>
     <div class="lps-table-wrapper">
@@ -321,24 +321,24 @@
         </thead>
         <tbody>
         <tr>
-          <td>Installed in the tunnel</td>
-          <td>~50 units per kilometre, wall-mounted</td>
+          <td>In-tunnel hardware</td>
+          <td>~50 units per kilometre</td>
           <td>Nothing</td>
         </tr>
         <tr>
-          <td>Hardware cost per kilometre</td>
+          <td>Cost per kilometre</td>
           <td>US$900&ndash;1,000, before installation</td>
-          <td>None per kilometre</td>
+          <td>None</td>
         </tr>
         <tr>
-          <td>Per-corridor setup</td>
+          <td>Setup per corridor</td>
           <td>Installation with traffic management</td>
           <td>One survey drive</td>
         </tr>
         <tr>
           <td>Ongoing</td>
           <td>Full replacement every 4&ndash;6 years</td>
-          <td>Re-survey only when the corridor changes</td>
+          <td>Re-survey if the corridor changes</td>
         </tr>
         <tr>
           <td>Scales with</td>
@@ -353,28 +353,37 @@
       for sources.
     </p>
 
-    <div class="lps-table-wrapper">
-      <table class="table lps-table lps-spec">
-        <tbody>
-        <tr><th>Update rate</th><td>~10 Hz position estimates</td></tr>
-        <tr><th>Processing</th><td>On-device; no GPU and no network connection required at runtime</td></tr>
-        <tr><th>Output</th><td>Position stream in the reference map's coordinate frame, geo-referenced when the survey run was</td></tr>
-        <tr><th>Reference map</th><td>Megabytes per route, so kilometres of corridor fit on edge hardware</td></tr>
-        </tbody>
-      </table>
+    <h3 class="title is-4 lps-subhead">What it takes to integrate</h3>
+    <div class="lps-specs">
+      <div class="lps-spec-card">
+        <span class="lps-spec-label">Update rate</span>
+        <span class="lps-spec-value">~10 Hz position estimates</span>
+      </div>
+      <div class="lps-spec-card">
+        <span class="lps-spec-label">Processing</span>
+        <span class="lps-spec-value">On-device. No GPU and no network connection at runtime.</span>
+      </div>
+      <div class="lps-spec-card">
+        <span class="lps-spec-label">Output</span>
+        <span class="lps-spec-value">Position stream in the reference map's coordinate frame, geo-referenced when the survey run was</span>
+      </div>
+      <div class="lps-spec-card">
+        <span class="lps-spec-label">Reference map</span>
+        <span class="lps-spec-value">Megabytes per route, so kilometres of corridor fit on edge hardware</span>
+      </div>
     </div>
-
     <div class="content">
       <p>
-        LPS complements GNSS and inertial sensing rather than replacing them. GNSS gives global
-        position wherever the sky is visible; inertial sensing bridges short outages but drifts
-        over long ones, and a tunnel transit of several minutes is a long one. LPS carries
-        positioning through the gap, drift-free, and hands back to GNSS at the portal, so it is an
-        addition to an existing positioning stack rather than a change to it. Integration
-        interfaces are being defined with pilot partners; tell us what your stack expects and it
-        can be matched to it.
+        LPS complements GNSS and inertial sensing rather than replacing them. Inertial sensing
+        bridges short outages but drifts over long ones, and a tunnel transit of several minutes
+        is a long one. LPS carries position through the gap, drift-free, and hands back to GNSS at
+        the portal: an addition to a positioning stack, not a change to it.
       </p>
     </div>
+    <p class="lps-table-note">
+      Integration interfaces are being defined with pilot partners; tell us what your stack
+      expects and it can be matched to it.
+    </p>
   </div>
 </section>
 

@@ -191,6 +191,59 @@ table.table.lps-table td {
   margin-top: 0.4rem;
 }
 
+/* Integration specs: cards rather than a second table, so the section does not
+   read as one long grid. A headerless spec table stacked under the cost table
+   was being read as more cost rows. */
+.lps-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin: 0.25rem 0 1.75rem 0;
+}
+
+.lps-spec-card {
+  background-color: var(--lps-panel);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+}
+
+.lps-spec-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lps-accent);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.lps-spec-value {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .lps-specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Subheads inside a section. Scoped to its own class rather than restyling
+   .title.is-4, which the Results subheadings also use: Bulma sizes is-4 at
+   1.5rem against this page's 1.6rem h2, which is too close to read as a level
+   down when two of them sit in one section. */
+.lps-subhead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+/* a subhead following a table's footnote needs the gap the note does not give */
+.lps-table-note + .lps-subhead {
+  margin-top: 2.5rem;
+}
+
 /* Privacy comparison */
 .lps-compare img {
   width: 100%;
