@@ -24,7 +24,7 @@
     <img class="lps-hero-logo" src="./assets/logos/lps.png" alt="LPS logo">
     <h1>Local Positioning System</h1>
     <p class="lps-subtitle">
-      Lane-level vehicle positioning that keeps running where GNSS fails &mdash; road tunnels,
+      Lane-level vehicle positioning that keeps running where GNSS fails: road tunnels,
       underground carparks and urban canyons. No roadside infrastructure.
     </p>
     <div class="lps-hero-buttons">
@@ -48,7 +48,7 @@
           <source src="./assets/videos/lane_detection_airportlink_combined.mp4" type="video/mp4">
         </video>
         <p class="lps-carousel-caption">
-          Lane-level positioning inside the AirportlinkM7 tunnel &mdash; 99.6% of lane calls
+          Lane-level positioning inside the AirportlinkM7 tunnel: 99.6% of lane calls
           correct across 1.3 km, where GNSS resolves no lane at all.
         </p>
       </div>
@@ -58,7 +58,7 @@
           <source src="./assets/videos/urban_demo.mp4?v=6" type="video/mp4">
         </video>
         <p class="lps-carousel-caption">
-          Urban driving in Kelvin Grove, Brisbane &mdash; continuous positioning along a 3.83 km
+          Urban driving in Kelvin Grove, Brisbane: continuous positioning along a 3.83 km
           route, checked against GPS the whole way.
         </p>
       </div>
@@ -72,17 +72,17 @@
     <h2 class="title is-3">The gap in the road network</h2>
     <div class="content">
       <p>
-        Brisbane alone routes traffic through the AirportlinkM7, Clem7 and Legacy Way, with Cross
-        River Rail to come. Vehicles do not stop needing a position when they go under: transit
+        Brisbane alone routes traffic through three major road tunnels: the AirportlinkM7, Clem7
+        and Legacy Way. Vehicles do not stop needing a position once they enter one. Transit
         continuity, freight visibility, emergency response and any level of driving automation all
         depend on knowing where the vehicle is. GNSS needs a clear view of the sky, so it degrades
         in urban canyons and disappears entirely underground.
       </p>
       <p>
         The established fix is to fit out the tunnel itself. Bluetooth beacons are specified at
-        20 m intervals &mdash; roughly 50 units per kilometre &mdash; wall-mounted 4 to 5 m above
-        the roadway. Hardware alone runs US$900 to US$1,000 per kilometre before installation or
-        traffic management, and because the batteries can be neither recharged nor replaced, the
+        20 m intervals, roughly 50 units per kilometre. Hardware alone runs US$900 to US$1,000
+        per kilometre before installation or traffic management, and because the batteries can be
+        neither recharged nor replaced, the
         entire population has to be swapped out every four to six years inside a live tunnel. That
         is a permanent obligation on the road operator, renewed every few years, for every bore.
       </p>
@@ -192,7 +192,7 @@
   <div class="lps-container">
     <h2 class="title is-3">Results</h2>
 
-    <h3 class="title is-4">Tunnel positioning &mdash; AirportlinkM7 and Clem7</h3>
+    <h3 class="title is-4">Tunnel positioning: AirportlinkM7 and Clem7</h3>
     <div class="content">
       <p>
         A 21.5 km return route from Brisbane Airport through the AirportlinkM7 and Clem7 tunnels,
@@ -207,8 +207,8 @@
       </video>
       <figcaption>
         Yellow marks GPS where it can be trusted. It vanishes at each of the four tunnel
-        transits &mdash; the vehicle's own receiver keeps claiming a fix, but reports accuracy
-        degrading past a kilometre &mdash; while LPS keeps producing position.
+        transits. The vehicle's own receiver keeps claiming a fix there, but reports accuracy
+        degrading past a kilometre, while LPS keeps producing position.
       </figcaption>
     </figure>
     <p class="lps-stats">
@@ -217,7 +217,7 @@
     <p class="lps-caveat">
       GPS is available at each portal and unusable between them, so the overlay shows exactly
       where LPS is running unaided. Portal-to-portal accuracy figures are being finalised against
-      a surveyed reference &mdash; see status below.
+      a surveyed reference.
     </p>
 
     <br>
@@ -227,7 +227,7 @@
       <p>
         Along-track position is only half of what an operator needs. Which lane the vehicle is in
         drives exit-ramp guidance, lane-specific traffic monitoring, incident response and
-        automated driving decisions &mdash; and lateral separation is only a few metres, which
+        automated driving decisions, and lateral separation is only a few metres, which
         makes it a demanding test for a low-resolution sensor. GNSS resolves no lane at all
         underground.
       </p>
@@ -239,16 +239,16 @@
       </video>
       <figcaption>
         One reference trajectory per lane: blue for the left lane, orange for the right. The
-        detected lane is called live from the sensor signature alone.
+        lane is called live from the sensor signature alone.
       </figcaption>
     </figure>
     <p class="lps-stats">
-      99.6% lane detection accuracy across 1.3 km with 6 lane changes
+      99.6% lane-level positioning accuracy across 1.3 km with 6 lane changes
     </p>
 
     <br>
 
-    <h3 class="title is-4">Urban driving &mdash; Kelvin Grove, Brisbane</h3>
+    <h3 class="title is-4">Urban driving: Kelvin Grove, Brisbane</h3>
     <div class="content">
       <p>
         A 3.83 km two-way urban route. GPS is available throughout, which makes this the
@@ -291,7 +291,7 @@
     <div class="content">
       <p>
         No faces, number plates or identifiable detail exist in the captured data. Privacy is
-        inherent to the sensor, not applied by post-processing &mdash; which removes a class of
+        inherent to the sensor, not applied by post-processing, which removes a class of
         data-governance and public-acceptance problems before it arises, whether the fleet is
         commercial, public transport or council-operated.
       </p>
@@ -299,43 +299,10 @@
   </div>
 </section>
 
-<!-- Deployment + integration -->
+<!-- Cost, integration and fit -->
 <section class="lps-section">
   <div class="lps-container">
-    <h2 class="title is-3">How it deploys</h2>
-    <ol class="lps-steps">
-      <li><strong>Attach the device</strong> &mdash; mount the sensor on the vehicle; no environment modification.</li>
-      <li><strong>Establish the local reference</strong> &mdash; drive the corridor once to build the map, or reuse an existing one.</li>
-      <li><strong>Localise on-device</strong> &mdash; the sensor matches live signatures against the reference in real time.</li>
-      <li><strong>Output position</strong> &mdash; a continuous position stream is delivered to the vehicle, fleet platform or app.</li>
-    </ol>
-
-    <h2 class="title is-3">Integration at a glance</h2>
-    <div class="lps-table-wrapper">
-      <table class="table lps-table lps-spec">
-        <tbody>
-        <tr><th>Update rate</th><td>~10 Hz position estimates</td></tr>
-        <tr><th>Processing</th><td>On-device; no GPU and no network connection required at runtime</td></tr>
-        <tr><th>Output</th><td>Position stream in the reference map's coordinate frame, geo-referenced when the survey run was</td></tr>
-        <tr><th>Data per frame</th><td>~1.5 KB sensor signature</td></tr>
-        <tr><th>Reference map</th><td>Megabytes per route, so kilometres of corridor fit on edge hardware</td></tr>
-        <tr><th>Sensor</th><td>62 &times; 45 &times; 47 mm, ~70 g, low power</td></tr>
-        <tr><th>Mounting</th><td>Vehicle-mounted; no beacons, markers or roadside units</td></tr>
-        <tr><th>Infrastructure</th><td>None added to the environment; nothing to power or replace in the tunnel</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="lps-table-note">
-      Integration interfaces are being defined with pilot partners &mdash; tell us what your stack
-      expects and it can be matched to it.
-    </p>
-  </div>
-</section>
-
-<!-- Fleet scale -->
-<section class="lps-section">
-  <div class="lps-container">
-    <h2 class="title is-3">What it costs to cover a corridor</h2>
+    <h2 class="title is-3">What it costs, and how it integrates</h2>
     <div class="content">
       <p>
         Beacons put the cost in the tunnel, once per tunnel, and again every replacement cycle.
@@ -385,41 +352,29 @@
       Beacon figures are Waze's published specifications for its Beacons programme; see the FAQ
       for sources.
     </p>
-  </div>
-</section>
 
-<!-- Where it fits -->
-<section class="lps-section">
-  <div class="lps-container">
-    <h2 class="title is-3">Where it fits in the stack</h2>
+    <div class="lps-table-wrapper">
+      <table class="table lps-table lps-spec">
+        <tbody>
+        <tr><th>Update rate</th><td>~10 Hz position estimates</td></tr>
+        <tr><th>Processing</th><td>On-device; no GPU and no network connection required at runtime</td></tr>
+        <tr><th>Output</th><td>Position stream in the reference map's coordinate frame, geo-referenced when the survey run was</td></tr>
+        <tr><th>Reference map</th><td>Megabytes per route, so kilometres of corridor fit on edge hardware</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="content">
       <p>
         LPS complements GNSS and inertial sensing rather than replacing them. GNSS gives global
-        position wherever the sky is visible. Inertial sensing bridges short outages but drifts
+        position wherever the sky is visible; inertial sensing bridges short outages but drifts
         over long ones, and a tunnel transit of several minutes is a long one. LPS carries
-        positioning through the gap, drift-free, and hands back to GNSS at the portal &mdash; which
-        makes it an addition to an existing positioning stack rather than a change to it.
+        positioning through the gap, drift-free, and hands back to GNSS at the portal, so it is an
+        addition to an existing positioning stack rather than a change to it. Integration
+        interfaces are being defined with pilot partners; tell us what your stack expects and it
+        can be matched to it.
       </p>
     </div>
-  </div>
-</section>
-
-<!-- Status -->
-<section class="lps-section">
-  <div class="lps-container">
-    <h2 class="title is-3">Current status</h2>
-    <div class="content">
-      <p>
-        This is a working research prototype with real-world results, not a productised sensor.
-        Being straight about the boundary is more useful to an integrator than a clean claim:
-      </p>
-    </div>
-    <ul class="lps-status">
-      <li><span class="lps-tag lps-tag-done">Demonstrated</span> Continuous positioning through 21.5 km of tunnel in both directions; lane-level detection at 99.6% over 1.3 km; 3.83 km of urban driving; indoor asset tracking.</li>
-      <li><span class="lps-tag lps-tag-wip">In progress</span> Portal-to-portal tunnel accuracy against a surveyed GNSS/INS and LiDAR reference, replacing GPS-relative figures.</li>
-      <li><span class="lps-tag lps-tag-wip">In progress</span> Day&ndash;night and adverse-weather operation on open roads; multi-lane and direction handling across a full carriageway.</li>
-      <li><span class="lps-tag lps-tag-wip">In progress</span> Integration interfaces and long-term map-ageing measurements, both driven by pilot requirements.</li>
-    </ul>
   </div>
 </section>
 
@@ -433,7 +388,7 @@
         <p>
           The established alternative is to fit out the tunnel itself with Bluetooth beacons, of
           which Waze Beacons are the most widely deployed example. Waze specifies them at 20 m
-          intervals &mdash; 15 m minimum, 40 m maximum &mdash; wall-mounted 4 to 5 m above the
+          intervals (15 m minimum, 40 m maximum), wall-mounted 4 to 5 m above the
           roadway with at least 25 cm clearance from any metal. That is roughly 50 units per
           kilometre at the optimal spacing; a published Australian deployment across Transurban
           tunnels used more than 930 beacons to cover 18 km.
@@ -444,7 +399,7 @@
           That figure covers the units alone, not installation, traffic management or tunnel
           access. The beacons are also consumable rather than permanent: battery life is 4 to 6
           years, and because the batteries are neither rechargeable nor replaceable, a dead unit
-          has to be replaced in full &mdash; so the whole population falls due for replacement
+          has to be replaced in full, so the whole population falls due for replacement
           roughly every five years, inside a live traffic tunnel.
         </p>
         <p>
@@ -498,8 +453,8 @@
       <details>
         <summary>What does it output, and how does it integrate?</summary>
         <p>
-          LPS outputs a position stream in the reference map's coordinate frame &mdash; geo-tagged
-          if the survey run was &mdash; which can be consumed by a vehicle system, fleet platform
+          LPS outputs a position stream in the reference map's coordinate frame (geo-tagged if
+          the survey run was), which can be consumed by a vehicle system, fleet platform
           or application in the same way as a GNSS feed. Integration interfaces are part of
           current pilot work.
         </p>
@@ -524,7 +479,7 @@
     <div class="content">
       <p>
         The same sensor and the same method work anywhere GNSS does not reach. Alongside the
-        transport work, LPS has been demonstrated tracking mobile assets indoors &mdash; a library
+        transport work, LPS has been demonstrated tracking mobile assets indoors: a library
         trolley moved across five levels and left in a storeroom, and hospital equipment that has
         to be found rather than searched for.
       </p>
@@ -554,8 +509,8 @@
         stack.
       </p>
       <p>
-        Project Leader: Professor Michael Milford, FTSE &mdash;
-        <a href="mailto:michael.milford@qut.edu.au">michael.milford@qut.edu.au</a>
+        Project Leader: Professor Michael Milford, FTSE
+        (<a href="mailto:michael.milford@qut.edu.au">michael.milford@qut.edu.au</a>)
       </p>
     </div>
   </div>
