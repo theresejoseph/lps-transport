@@ -48,8 +48,8 @@
           <source src="./assets/videos/lane_detection_airportlink_combined.mp4" type="video/mp4">
         </video>
         <p class="lps-carousel-caption">
-          Lane-level positioning inside the AirportlinkM7 tunnel: 99.6% of lane calls
-          correct across 1.3 km, where GNSS resolves no lane at all.
+          Lane-level positioning inside the AirportlinkM7 tunnel: the position estimate lands
+          in the correct lane 99.6% of the time across 1.3 km, with no GNSS underground.
         </p>
       </div>
       <div class="item">
@@ -225,11 +225,11 @@
     <h3 class="title is-4">Lane-level positioning inside tunnels</h3>
     <div class="content">
       <p>
-        Along-track position is only half of what an operator needs. Which lane the vehicle is in
-        drives exit-ramp guidance, lane-specific traffic monitoring, incident response and
-        automated driving decisions, and lateral separation is only a few metres, which
-        makes it a demanding test for a low-resolution sensor. GNSS resolves no lane at all
-        underground.
+        Along-track position is only half of what an operator needs. Which lane the vehicle is
+        in drives exit-ramp guidance, lane-specific traffic monitoring, incident response and
+        automated driving decisions. Adjacent lanes are only a few metres apart, and the position
+        estimate itself is accurate enough to tell them apart: from a low-resolution sensor,
+        underground, with no GNSS.
       </p>
     </div>
     <figure class="lps-figure">
@@ -239,7 +239,7 @@
       </video>
       <figcaption>
         One reference trajectory per lane: blue for the left lane, orange for the right. The
-        lane is called live from the sensor signature alone.
+        live estimate resolves to one of them from the sensor signature alone.
       </figcaption>
     </figure>
     <p class="lps-stats">
