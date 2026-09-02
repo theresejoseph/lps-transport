@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="The Local Positioning System (LPS) is a privacy-preserving positioning sensor from QUT Centre for Robotics that keeps working where GPS can't - tunnels, carparks and indoor environments.">
-  <meta name="keywords" content="Local Positioning System, LPS, GPS-denied positioning, tunnel positioning, QUT Centre for Robotics">
+        content="The Local Positioning System (LPS) keeps vehicle positioning running where GNSS fails - road tunnels, underground carparks and urban canyons - using a low-resolution privacy-preserving sensor and a compact reference map, with no roadside infrastructure.">
+  <meta name="keywords" content="Local Positioning System, LPS, GPS-denied positioning, tunnel positioning, lane-level positioning, autonomous vehicles, fleet telematics, QUT Centre for Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Local Positioning System</title>
 
@@ -24,29 +24,22 @@
     <img class="lps-hero-logo" src="./assets/logos/lps.png" alt="LPS logo">
     <h1>Local Positioning System</h1>
     <p class="lps-subtitle">
-      Positioning that keeps working where GPS can't &mdash; tunnels, carparks and indoor environments.
+      Lane-level vehicle positioning that keeps running where GNSS fails &mdash; road tunnels,
+      underground carparks and urban canyons. No roadside infrastructure.
     </p>
     <div class="lps-hero-buttons">
-      <a class="button lps-button" href="#contact">Contact</a>
+      <a class="button lps-button" href="#contact">Talk to us about a pilot</a>
       <a class="button lps-button-outline" href="https://localpositioningsystem.com" target="_blank" rel="noopener">LPS Website</a>
     </div>
     <div id="hero-carousel" class="carousel lps-hero-carousel">
       <div class="item">
         <video class="lps-video" autoplay muted loop playsinline
-               poster="./assets/posters/tunnel_demo_poster.jpg">
-          <source src="./assets/videos/tunnel_demo.mp4" type="video/mp4">
+               poster="./assets/posters/tunnel_demo_poster.jpg?v=4">
+          <source src="./assets/videos/tunnel_demo.mp4?v=4" type="video/mp4">
         </video>
         <p class="lps-carousel-caption">
-          Live position estimates through the AirportlinkM7 and Clem7 tunnels, Brisbane &mdash; no GPS, no roadside infrastructure.
-        </p>
-      </div>
-      <div class="item">
-        <video class="lps-video" autoplay muted loop playsinline
-               poster="./assets/posters/urban_demo_poster.jpg?v=3">
-          <source src="./assets/videos/urban_demo.mp4?v=3" type="video/mp4">
-        </video>
-        <p class="lps-carousel-caption">
-          Urban driving in Kelvin Grove, Brisbane &mdash; continuous positioning along a 3.83 km route.
+          21.5 km through the AirportlinkM7 and Clem7 tunnels, Brisbane. The yellow GPS marker
+          disappears at each portal; the LPS estimate does not.
         </p>
       </div>
       <div class="item">
@@ -55,7 +48,18 @@
           <source src="./assets/videos/lane_detection_airportlink_combined.mp4" type="video/mp4">
         </video>
         <p class="lps-carousel-caption">
-          Lane-level positioning inside the AirportlinkM7 tunnel &mdash; 99.6% lane detection accuracy.
+          Lane-level positioning inside the AirportlinkM7 tunnel &mdash; 99.6% of lane calls
+          correct across 1.3 km, where GNSS resolves no lane at all.
+        </p>
+      </div>
+      <div class="item">
+        <video class="lps-video" autoplay muted loop playsinline
+               poster="./assets/posters/urban_demo_poster.jpg?v=4">
+          <source src="./assets/videos/urban_demo.mp4?v=4" type="video/mp4">
+        </video>
+        <p class="lps-carousel-caption">
+          Urban driving in Kelvin Grove, Brisbane &mdash; continuous positioning along a 3.83 km
+          route, checked against GPS the whole way.
         </p>
       </div>
     </div>
@@ -63,49 +67,61 @@
 </section>
 
 <!-- The gap -->
-<!-- <section class="lps-section">
+<section class="lps-section">
   <div class="lps-container">
-    <h2 class="title is-3">The gap</h2>
+    <h2 class="title is-3">The gap in the road network</h2>
     <div class="content">
       <p>
-        Drive into a tunnel, a carpark or a shopping centre and the blue dot freezes, then jumps.
-        GPS needs a clear view of the sky &mdash; a nuisance for commuters, a critical gap for
-        fleets, emergency dispatch and automated vehicles. The established fix is to fit out the
-        tunnel itself: Bluetooth beacons wall-mounted every 20 m, US$900 to US$1,000 per kilometre
-        in hardware alone, replaced outright every few years because their batteries cannot be.
+        Brisbane alone routes traffic through the AirportlinkM7, Clem7 and Legacy Way, with Cross
+        River Rail to come. Vehicles do not stop needing a position when they go under: transit
+        continuity, freight visibility, emergency response and any level of driving automation all
+        depend on knowing where the vehicle is. GNSS needs a clear view of the sky, so it degrades
+        in urban canyons and disappears entirely underground.
+      </p>
+      <p>
+        The established fix is to fit out the tunnel itself. Bluetooth beacons are specified at
+        20 m intervals &mdash; roughly 50 units per kilometre &mdash; wall-mounted 4 to 5 m above
+        the roadway. Hardware alone runs US$900 to US$1,000 per kilometre before installation or
+        traffic management, and because the batteries can be neither recharged nor replaced, the
+        entire population has to be swapped out every four to six years inside a live tunnel. That
+        is a permanent obligation on the road operator, renewed every few years, for every bore.
+      </p>
+      <p>
+        LPS moves the hardware onto the vehicle instead, and leaves the tunnel untouched.
       </p>
     </div>
   </div>
-</section> -->
+</section>
 
-<!-- What is LPS ? -->
+<!-- What is LPS -->
 <section class="lps-section">
   <div class="lps-container">
     <h2 class="title is-3">What is LPS?</h2>
     <div class="columns lps-mounts">
       <div class="column has-text-centered">
-        <img src="./assets/images/mount_library_trolley.png" alt="LPS sensor mounted on a library trolley">
-        <p class="lps-compare-label">Library trolleys</p>
+        <img src="./assets/images/lps_prototype_hero.jpg" alt="The LPS sensor prototype">
+        <p class="lps-compare-label">The sensor &mdash; 62 &times; 45 &times; 47 mm, ~70 g</p>
       </div>
       <div class="column has-text-centered">
-        <img src="./assets/images/mount_vehicle.png" alt="LPS sensor mounted on a car roof">
-        <p class="lps-compare-label">Vehicles</p>
+        <img src="./assets/images/mount_vehicle_front.jpg" alt="LPS sensor mounted on a car roof, circled">
+        <p class="lps-compare-label">Mounted on the vehicle</p>
       </div>
       <div class="column has-text-centered">
-        <img src="./assets/images/mount_hospital_bed.png" alt="LPS sensor mounted on a hospital bed">
-        <p class="lps-compare-label">Hospital beds</p>
+        <img src="./assets/images/mount_vehicle_wide.jpg" alt="Instrumented vehicle on a suburban street with the LPS sensor circled on the roof">
+        <p class="lps-compare-label">On the road, nothing installed roadside</p>
       </div>
     </div>
     <div class="content">
       <p>
         LPS is a small, low-resolution sensor that estimates position by matching what it sees
-        against a compact local reference map. The sensor travels with the vehicle or asset; the
-        environment is left untouched &mdash; no beacons, markers or roadside units. A reference
-        map covering kilometres of corridor is megabytes in size, so mapping once and localising
-        on-device is practical at fleet scale.
+        against a compact reference map of the corridor. The map is built by driving the route
+        once; every vehicle afterwards localises against it on-device. Nothing is installed in the
+        tunnel, on the roadside or in the road surface, and the same unit works on any mapped
+        corridor rather than only the ones that have been fitted out.
       </p>
     </div>
-    <h2 class="title is-3">Low power, Low profile, Low data requirements</h2>
+
+    <h2 class="title is-3">Low power, low profile, low data</h2>
     <div class="lps-table-wrapper">
       <table class="table lps-table">
         <thead>
@@ -175,10 +191,95 @@
   </div>
 </section>
 
-<!-- Privacy by design -->
+<!-- Results -->
 <section class="lps-section">
   <div class="lps-container">
-    <h2 class="title is-3">Privacy by design</h2>
+    <h2 class="title is-3">Results</h2>
+
+    <h3 class="title is-4">Tunnel positioning &mdash; AirportlinkM7 and Clem7</h3>
+    <div class="content">
+      <p>
+        A 21.5 km return route from Brisbane Airport through the AirportlinkM7 and Clem7 tunnels,
+        covering both directions. The reference was mapped once; no hardware was installed in
+        either tunnel.
+      </p>
+    </div>
+    <figure class="lps-figure">
+      <video class="lps-video" autoplay muted loop playsinline
+             poster="./assets/posters/tunnel_demo_poster.jpg?v=4">
+        <source src="./assets/videos/tunnel_demo.mp4?v=4" type="video/mp4">
+      </video>
+      <figcaption>
+        Yellow marks GPS where it can be trusted. It vanishes at each of the four tunnel
+        transits &mdash; the vehicle's own receiver keeps claiming a fix, but reports accuracy
+        degrading past a kilometre &mdash; while LPS keeps producing position.
+      </figcaption>
+    </figure>
+    <p class="lps-stats">
+      21.5 km return route &middot; continuous positioning through four full GNSS outages &middot; reference mapped once &middot; no infrastructure installed
+    </p>
+    <p class="lps-caveat">
+      GPS is available at each portal and unusable between them, so the overlay shows exactly
+      where LPS is running unaided. Portal-to-portal accuracy figures are being finalised against
+      a surveyed reference &mdash; see status below.
+    </p>
+
+    <br>
+
+    <h3 class="title is-4">Lane-level positioning inside tunnels</h3>
+    <div class="content">
+      <p>
+        Along-track position is only half of what an operator needs. Which lane the vehicle is in
+        drives exit-ramp guidance, lane-specific traffic monitoring, incident response and
+        automated driving decisions &mdash; and lateral separation is only a few metres, which
+        makes it a demanding test for a low-resolution sensor. GNSS resolves no lane at all
+        underground.
+      </p>
+    </div>
+    <figure class="lps-figure">
+      <video class="lps-video" autoplay muted loop playsinline
+             poster="./assets/posters/lane_detection_poster.jpg">
+        <source src="./assets/videos/lane_detection_airportlink_combined.mp4" type="video/mp4">
+      </video>
+      <figcaption>
+        One reference trajectory per lane: blue for the left lane, orange for the right. The
+        detected lane is called live from the sensor signature alone.
+      </figcaption>
+    </figure>
+    <p class="lps-stats">
+      99.6% lane detection accuracy across 1.3 km with 6 lane changes
+    </p>
+
+    <br>
+
+    <h3 class="title is-4">Urban driving &mdash; Kelvin Grove, Brisbane</h3>
+    <div class="content">
+      <p>
+        A 3.83 km two-way urban route. GPS is available throughout, which makes this the
+        reference point for interpreting the GNSS-denied tests above.
+      </p>
+    </div>
+    <figure class="lps-figure">
+      <video class="lps-video" autoplay muted loop playsinline
+             poster="./assets/posters/urban_demo_poster.jpg?v=4">
+        <source src="./assets/videos/urban_demo.mp4?v=4" type="video/mp4">
+      </video>
+    </figure>
+    <p class="lps-stats">
+      Median error 5.8 m &middot; 93.9% of estimates within 25 m &middot; cross-track RMSE 3.0 m &middot; along-track RMSE 10.9 m
+    </p>
+    <p class="lps-caveat">
+      These are errors relative to GPS, not to surveyed ground truth. Low cross-track error means
+      LPS held the correct side of the road; along-track error is larger, so how far along the
+      road the vehicle is carries more uncertainty than which lane it is in.
+    </p>
+  </div>
+</section>
+
+<!-- Privacy / data governance -->
+<section class="lps-section">
+  <div class="lps-container">
+    <h2 class="title is-3">Nothing identifiable leaves the vehicle</h2>
     <div class="columns lps-compare">
       <div class="column">
         <img src="./assets/images/rgb_360_view.png"
@@ -194,107 +295,135 @@
     <div class="content">
       <p>
         No faces, number plates or identifiable detail exist in the captured data. Privacy is
-        inherent to the sensor, not applied by post-processing.
+        inherent to the sensor, not applied by post-processing &mdash; which removes a class of
+        data-governance and public-acceptance problems before it arises, whether the fleet is
+        commercial, public transport or council-operated.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Results -->
-<section class="lps-section">
-  <div class="lps-container">
-    <h2 class="title is-3">Results</h2>
-
-    <h3 class="title is-4">Urban driving &mdash; Kelvin Grove, Brisbane</h3>
-    <div class="content">
-      <p>A 3.83 km two-way urban route through Kelvin Grove.</p>
-    </div>
-    <figure class="lps-figure">
-      <video class="lps-video" autoplay muted loop playsinline
-             poster="./assets/posters/urban_demo_poster.jpg?v=2">
-        <source src="./assets/videos/urban_demo.mp4?v=2" type="video/mp4">
-      </video>
-    </figure>
-    <p class="lps-stats">
-      Median error 5.8 m &middot; 93.9% of estimates within 25 m &middot; cross-track RMSE 3.0 m &middot; along-track RMSE 10.9 m
-    </p>
-    <p class="lps-caveat">
-      These are errors relative to GPS, not to surveyed ground truth. Agreement with GPS in urban
-      driving provides a useful reference point for interpreting later tests where GPS is
-      unavailable.
-    </p>
-
-    <br>
-
-    <h3 class="title is-4">Tunnel positioning &mdash; AirportlinkM7 and Clem7</h3>
-    <div class="content">
-      <p>
-        A 21.5 km return route through Brisbane's AirportlinkM7 and Clem7 tunnels, maintaining
-        continuous positioning through the full GPS outage.
-      </p>
-    </div>
-    <figure class="lps-figure">
-      <video class="lps-video" autoplay muted loop playsinline
-             poster="./assets/posters/tunnel_demo_poster.jpg">
-        <source src="./assets/videos/tunnel_demo.mp4" type="video/mp4">
-      </video>
-    </figure>
-    <p class="lps-stats">
-      21.5 km return route &middot; continuous positioning through full GPS outage &middot; reference mapped once &middot; no infrastructure installed
-    </p>
-
-    <br>
-
-    <h3 class="title is-4">Lane-level positioning in tunnels</h3>
-    <div class="content">
-      <p>
-        Distinguishing which lane the vehicle is in, using one reference trajectory per lane,
-        where lateral separation is only a few metres.
-      </p>
-    </div>
-    <figure class="lps-figure">
-      <video class="lps-video" autoplay muted loop playsinline
-             poster="./assets/posters/lane_detection_poster.jpg">
-        <source src="./assets/videos/lane_detection_airportlink_combined.mp4" type="video/mp4">
-      </video>
-    </figure>
-    <p class="lps-stats">
-      99.6% lane detection accuracy across 1.3 km with 6 lane changes
-    </p>
-  </div>
-</section>
-
-<!-- How it deploys -->
+<!-- Deployment + integration -->
 <section class="lps-section">
   <div class="lps-container">
     <h2 class="title is-3">How it deploys</h2>
     <ol class="lps-steps">
-      <li><strong>Attach the device</strong> &mdash; mount the LPS sensor on the vehicle or asset; no environment modification.</li>
-      <li><strong>Establish the local reference</strong> &mdash; drive the route once to build the map, or reuse an existing one.</li>
+      <li><strong>Attach the device</strong> &mdash; mount the sensor on the vehicle; no environment modification.</li>
+      <li><strong>Establish the local reference</strong> &mdash; drive the corridor once to build the map, or reuse an existing one.</li>
       <li><strong>Localise on-device</strong> &mdash; the sensor matches live signatures against the reference in real time.</li>
-      <li><strong>Output position</strong> &mdash; a continuous position stream is delivered to the vehicle, asset system or app.</li>
+      <li><strong>Output position</strong> &mdash; a continuous position stream is delivered to the vehicle, fleet platform or app.</li>
     </ol>
+
+    <h2 class="title is-3">Integration at a glance</h2>
+    <div class="lps-table-wrapper">
+      <table class="table lps-table lps-spec">
+        <tbody>
+        <tr><th>Update rate</th><td>~10 Hz position estimates</td></tr>
+        <tr><th>Processing</th><td>On-device; no GPU and no network connection required at runtime</td></tr>
+        <tr><th>Output</th><td>Position stream in the reference map's coordinate frame, geo-referenced when the survey run was</td></tr>
+        <tr><th>Data per frame</th><td>~1.5 KB sensor signature</td></tr>
+        <tr><th>Reference map</th><td>Megabytes per route, so kilometres of corridor fit on edge hardware</td></tr>
+        <tr><th>Sensor</th><td>62 &times; 45 &times; 47 mm, ~70 g, low power</td></tr>
+        <tr><th>Mounting</th><td>Vehicle-mounted; no beacons, markers or roadside units</td></tr>
+        <tr><th>Infrastructure</th><td>None added to the environment; nothing to power or replace in the tunnel</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lps-table-note">
+      Integration interfaces are being defined with pilot partners &mdash; tell us what your stack
+      expects and it can be matched to it.
+    </p>
+  </div>
+</section>
+
+<!-- Fleet scale -->
+<section class="lps-section">
+  <div class="lps-container">
+    <h2 class="title is-3">What it costs to cover a corridor</h2>
     <div class="content">
       <p>
-        The reference map for kilometres of corridor is megabytes, so the whole pipeline runs on
-        edge hardware without cloud round-trips.
+        Beacons put the cost in the tunnel, once per tunnel, and again every replacement cycle.
+        LPS puts it on the vehicle, where it scales with the fleet instead of the network, and the
+        per-corridor cost is a single survey pass.
       </p>
     </div>
+    <div class="lps-table-wrapper">
+      <table class="table lps-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>In-tunnel beacons</th>
+          <th>LPS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Installed in the tunnel</td>
+          <td>~50 units per kilometre, wall-mounted</td>
+          <td>Nothing</td>
+        </tr>
+        <tr>
+          <td>Hardware cost per kilometre</td>
+          <td>US$900&ndash;1,000, before installation</td>
+          <td>None per kilometre</td>
+        </tr>
+        <tr>
+          <td>Per-corridor setup</td>
+          <td>Installation with traffic management</td>
+          <td>One survey drive</td>
+        </tr>
+        <tr>
+          <td>Ongoing</td>
+          <td>Full replacement every 4&ndash;6 years</td>
+          <td>Re-survey only when the corridor changes</td>
+        </tr>
+        <tr>
+          <td>Scales with</td>
+          <td>Kilometres of tunnel fitted out</td>
+          <td>Vehicles equipped</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lps-table-note">
+      Beacon figures are Waze's published specifications for its Beacons programme; see the FAQ
+      for sources.
+    </p>
   </div>
 </section>
 
 <!-- Where it fits -->
 <section class="lps-section">
   <div class="lps-container">
-    <h2 class="title is-3">Where it fits</h2>
+    <h2 class="title is-3">Where it fits in the stack</h2>
     <div class="content">
       <p>
-        LPS complements GNSS and inertial sensing rather than replacing them. GNSS provides global
-        position where the sky is visible; inertial sensors bridge short outages but drift over
-        longer ones. LPS carries positioning through the gaps &mdash; tunnels, carparks and indoor
-        corridors &mdash; drift-free and without any new infrastructure in the environment.
+        LPS complements GNSS and inertial sensing rather than replacing them. GNSS gives global
+        position wherever the sky is visible. Inertial sensing bridges short outages but drifts
+        over long ones, and a tunnel transit of several minutes is a long one. LPS carries
+        positioning through the gap, drift-free, and hands back to GNSS at the portal &mdash; which
+        makes it an addition to an existing positioning stack rather than a change to it.
       </p>
     </div>
+  </div>
+</section>
+
+<!-- Status -->
+<section class="lps-section">
+  <div class="lps-container">
+    <h2 class="title is-3">Current status</h2>
+    <div class="content">
+      <p>
+        This is a working research prototype with real-world results, not a productised sensor.
+        Being straight about the boundary is more useful to an integrator than a clean claim:
+      </p>
+    </div>
+    <ul class="lps-status">
+      <li><span class="lps-tag lps-tag-done">Demonstrated</span> Continuous positioning through 21.5 km of tunnel in both directions; lane-level detection at 99.6% over 1.3 km; 3.83 km of urban driving; indoor asset tracking.</li>
+      <li><span class="lps-tag lps-tag-wip">In progress</span> Portal-to-portal tunnel accuracy against a surveyed GNSS/INS and LiDAR reference, replacing GPS-relative figures.</li>
+      <li><span class="lps-tag lps-tag-wip">In progress</span> Day&ndash;night and adverse-weather operation on open roads; multi-lane and direction handling across a full carriageway.</li>
+      <li><span class="lps-tag lps-tag-wip">In progress</span> Integration interfaces and long-term map-ageing measurements, both driven by pilot requirements.</li>
+    </ul>
   </div>
 </section>
 
@@ -329,21 +458,31 @@
         </p>
       </details>
       <details>
+        <summary>How do you know it works in a tunnel if there is no GPS to check against?</summary>
+        <p>
+          At the portals there is. GPS is trustworthy on the approach and again on the exit, so
+          each tunnel transit is bracketed by a known position at both ends, and the tunnel videos
+          show exactly where that check is available and where it is not. That bounds how far the
+          estimate can have wandered, but it is not a continuous measurement, which is why a
+          surveyed GNSS/INS and LiDAR reference campaign is the next step rather than a claim we
+          are making today.
+        </p>
+      </details>
+      <details>
         <summary>How often does the reference map need re-surveying?</summary>
         <p>
-          The reference is built from one drive-through of the route and only needs updating when
-          the environment changes substantially. Tunnels and indoor corridors change slowly.
-          Because a re-survey is a single pass with the same sensor and the map is megabytes in
-          size, refreshing a route is a routine operation rather than a mapping campaign.
+          The reference is built from one drive-through and only needs updating when the corridor
+          changes substantially. Tunnels change slowly. Because a re-survey is a single pass with
+          the same sensor and the map is megabytes in size, refreshing a route is a routine
+          operation rather than a mapping campaign.
         </p>
       </details>
       <details>
         <summary>Does it work at night or under changing lighting?</summary>
         <p>
-          Tunnels and indoor spaces are lit artificially and remain stable around the clock, which
-          is where LPS has been demonstrated. Large lighting shifts
-          between mapping and localisation can degrade matching; evaluating day-night operation on
-          open roads is ongoing work.
+          Tunnels are lit artificially and remain stable around the clock, which is where LPS has
+          been demonstrated. Large lighting shifts between mapping and localisation can degrade
+          matching; evaluating day&ndash;night operation on open roads is ongoing work.
         </p>
       </details>
       <details>
@@ -382,18 +521,45 @@
   </div>
 </section>
 
+<!-- Beyond transport -->
+<section class="lps-section">
+  <div class="lps-container">
+    <h2 class="title is-3">Beyond the road network</h2>
+    <div class="content">
+      <p>
+        The same sensor and the same method work anywhere GNSS does not reach. Alongside the
+        transport work, LPS has been demonstrated tracking mobile assets indoors &mdash; a library
+        trolley moved across five levels and left in a storeroom, and hospital equipment that has
+        to be found rather than searched for.
+      </p>
+    </div>
+    <div class="columns lps-beyond">
+      <div class="column has-text-centered">
+        <img src="./assets/images/mount_library_trolley.png" alt="LPS sensor mounted on a library trolley">
+        <p class="lps-compare-label">Library trolleys</p>
+      </div>
+      <div class="column has-text-centered">
+        <img src="./assets/images/mount_hospital_bed.png" alt="LPS sensor mounted on a hospital bed">
+        <p class="lps-compare-label">Hospital beds</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section class="lps-section" id="contact">
   <div class="lps-container">
-    <h2 class="title is-3">Contact</h2>
+    <h2 class="title is-3">Talk to us about a pilot</h2>
     <div class="content">
+      <p>
+        A pilot is deliberately small: pick a corridor that matters to you, we survey it in a
+        single pass, mount a sensor on one of your vehicles, and you evaluate the output against
+        whatever reference you already trust. That is enough to tell whether this belongs in your
+        stack.
+      </p>
       <p>
         Project Leader: Professor Michael Milford, FTSE &mdash;
         <a href="mailto:michael.milford@qut.edu.au">michael.milford@qut.edu.au</a>
-      </p>
-      <p>
-        If LPS could be useful in your vehicles, fleet or facility, we are open to pilot and
-        integration conversations.
       </p>
     </div>
   </div>
